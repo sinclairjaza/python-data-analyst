@@ -3,7 +3,7 @@
 import pandas as pd
 
 # Read datasets/yearly_deaths_by_clinic.csv into yearly
-yearly = pd.read_csv("datasets/yearly_deaths_by_clinic.csv")
+yearly = pd.read_csv("yearly_deaths_by_clinic.csv")
 
 # Print out yearly
 print(yearly)
@@ -26,7 +26,7 @@ ax = clinic_1.plot(x='year', y='proportion_deaths', label='Clinic 1')
 clinic_2.plot(x="year", y="proportion_deaths", label="Clinic 2", ax=ax, ylabel="Proportion deaths")
 
 # Read datasets/monthly_deaths.csv into monthly
-monthly = pd.read_csv("datasets/monthly_deaths.csv", parse_dates=["date"])
+monthly = pd.read_csv("monthly_deaths.csv", parse_dates=["date"])
 
 # Calculate proportion of deaths per no. births
 monthly["proportion_deaths"] = monthly["deaths"] / monthly["births"]
